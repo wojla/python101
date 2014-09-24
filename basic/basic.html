@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Python - Podstawy programowania &mdash; Python 101 0.5 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Python 101 0.5 documentation" href="../index.html"/>
+        <link rel="next" title="2. Gra w Kółko i Krzyżyk" href="../tic-tac-toe.html"/>
+        <link rel="prev" title="Przygotowanie katalogu projektu" href="../git.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Python 101</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../env.html">Środowisko systemowe i wymagane oprogramowanie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../env.html#szkolny-remix-ucznia-sru">Szkolny Remix Ucznia (SRU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../env.html#srodowisko-windows">Środowisko Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../env.html#srodowisko-programistyczne-pycharm">Środowisko programistyczne PyCharm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">Przygotowanie katalogu projektu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git.html#pobieranie-materialow">Pobieranie materiałów</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Python - Podstawy programowania</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zmienne">1.1. Zmienne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wyrazenia-warunkowe">1.2. Wyrażenia warunkowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gra-w-zgadnij-liczbe">1.3. Gra w &#8220;zgadnij liczbę&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zadania-dodatkowe">1.4. Zadania dodatkowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#petla-while">1.5. Pętla WHILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wyrazenia-break-i-continue">1.6. Wyrażenia break i continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#petla-for">1.7. Pętla FOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slowniczek">1.8. Słowniczek</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tic-tac-toe.html">2. Gra w Kółko i Krzyżyk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pong/pong.html">3. Gra w Ponga</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#przygotowanie">3.1. Przygotowanie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#okienko-gry">3.2. Okienko gry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#pileczka">3.3. Piłeczka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#odbijanie-pileczki">3.4. Odbijanie piłeczki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#odbijamy-pileczke-rakietka">3.5. Odbijamy piłeczkę rakietką</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#gramy-przeciwko-komputerowi">3.6. Gramy przeciwko komputerowi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#pokazujemy-punkty">3.7. Pokazujemy punkty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pong/pong.html#zadania-dodatkowe-i-rzeczy-ktore-mozna-poprawic">3.8. Zadania dodatkowe i rzeczy które można poprawić</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conway-life.html">4. Gra w Życie Conwaya</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quiz.html">5. Quiz – Aplikacja internetowa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quiz.html#struktura-katalogow">5.1. Struktura katalogów</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quiz.html#szkielet-aplikacji">5.2. Szkielet aplikacji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quiz.html#definiowanie-widokow-strona-glowna">5.3. Definiowanie widoków – strona główna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quiz.html#pokaz-dane-aplikacji-pytania-i-odpowiedzi">5.4. Pokaż dane aplikacji – pytania i odpowiedzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quiz.html#oceniamy-odpowiedzi">5.5. Oceniamy odpowiedzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quiz.html#dodatkowe-informacje">5.6. Dodatkowe informacje</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">6. Lista ToDo – Aplikacja internetowa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chatter.html">7. Chatter – Aplikacja internetowa</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python 101</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>1. Python - Podstawy programowania</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/basic/basic.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="python-podstawy-programowania">
+<h1>1. Python - Podstawy programowania<a class="headerlink" href="#python-podstawy-programowania" title="Permalink to this headline">¶</a></h1>
+<p>Python jest dynamicznym językiem interpretowanym.</p>
+<p>Interpretowany tzn. że kod, który napiszemy możemy natychmiast wykonać bez
+potrzeby tłumaczenia (kompilowania) kodu programistycznego na język maszynowy (czyli na
+formę zrozumiałą przez komputer).</p>
+<p>Interpreter tłumaczy (kompiluje w locie) nasz kod oraz natychmiast go uruchamia.
+Interpreter może również być używany w trybie interaktywnym do testowania <code class="docutils literal"><span class="pre">kawałków</span></code>
+kodu (np. IPython omawiany w kolejnych scenariuszach).</p>
+<p>Naukę zaczynamy od poznania interpretera. Interpreter uruchamiamy z konsoli poleceniem</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ python
+</pre></div>
+</div>
+<p>Po uruchomieniu interpretera komputer powinien wypisać trzy linie tekstu a w czwartej tak zwany
+znak zachęty, po którym wpisujemy komendy. Standardowym znakiem zachęty w interpreterze
+Pythona jest <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Przykłady zawierające znak zachęty <code class="docutils literal"><span class="pre">$</span></code> oznaczają komendy
+do wykonania w terminalu systemu operacyjnego (uruchom przez <code class="kbd docutils literal"><span class="pre">Win+T</span></code>).</p>
+<p class="last">Komendy należy kopiować i wklejać bez znaku zachęty <code class="docutils literal"><span class="pre">$</span></code> i poprzedzającego tekstu.
+Komendy można wklejać do terminala środkowym klawiszem myszki.</p>
+</div>
+<div class="section" id="zmienne">
+<h2>1.1. Zmienne<a class="headerlink" href="#zmienne" title="Permalink to this headline">¶</a></h2>
+<p>W interpreterze wpisz poniższy przykład:</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="code pycon highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="mf">6.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">+</span> <span class="n">c</span>
+<span class="go">-3.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span><span class="o">/</span><span class="mi">2</span>
+<span class="go">3.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span><span class="o">*</span><span class="mi">6</span>
+<span class="go">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span><span class="o">**</span><span class="mi">6</span>
+<span class="go">64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kwiatek</span> <span class="o">=</span> <span class="s">&#39;stokrotka&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kwiatek2</span> <span class="o">=</span> <span class="s">&quot;róża&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kwiatek</span> <span class="o">+</span> <span class="s">&#39; i &#39;</span> <span class="o">+</span> <span class="n">kwiatek2</span>
+<span class="go">&#39;stokrotka i róża&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Przykłady zawierające znaki zachęty <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> elementy do wykonania w interpreterze
+języka Python.
+Komendy należy kopiować i wklejać bez znaku zachęty <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>.</p>
+</div>
+<p>W powyższym przykładzie wykonujemy operacje na zmiennych. Zmienne są &#8220;pudełkami&#8221;
+trzymającymi różne informacje. Zmienna posiada swoją nazwę i wartość. Nazwa zmiennej w Pythonie
+nie może zawierać:</p>
+<ul class="simple">
+<li>polskich znaków</li>
+<li>cyfry na pierwszym miejscu</li>
+<li>spacji</li>
+<li>znaków specjalnych za wyjątkiem podkreślnikiem ( _ )</li>
+</ul>
+<p>Wielkość liter jest rozróżniana (zmienna x i zmienna X to dwie różne zmienne).
+Przykłady poprawnych:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">i</span></code></li>
+<li><code class="docutils literal"><span class="pre">_chodnik</span></code></li>
+<li><code class="docutils literal"><span class="pre">nazwa_23</span></code></li>
+<li><code class="docutils literal"><span class="pre">a2c4</span></code></li>
+</ul>
+<p>Przykłady niepoprawnych:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">1nazwa</span></code></li>
+<li><code class="docutils literal"><span class="pre">4_strony_świata</span></code></li>
+<li><code class="docutils literal"><span class="pre">z-myslnikiem</span></code>,</li>
+<li><code class="docutils literal"><span class="pre">nazwa</span> <span class="pre">ze</span> <span class="pre">spacja</span></code></li>
+</ul>
+<p>Główne typy zmiennych, którymi będziemy się zajmować to:</p>
+<ul class="simple">
+<li>liczby całkowite (integer)</li>
+<li>liczby zmiennoprzecinkowe (float)</li>
+<li>napisy, czyli tzw. Łańcuchy znaków (string)</li>
+</ul>
+<p>Istnieje wiele innych typów zmiennych. [odniesienie do zewn. Źródeł]
+Zróbmy proste zadanie - będąc w interpreterze wykonaj:</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><div class="highlight"><pre>zmienna1 = raw_input(``Podaj imię: ``)
+print(``Witaj``, zmienna1)
+</pre></div>
+</div>
+<p>Stworzyliśmy właśnie pierwszy program w języku Python. Gratulacje!</p>
+<p>Przy użyciu funkcji <code class="docutils literal"><span class="pre">raw_input</span></code> pobiera on do zmiennej to, co użytkownik wpisze z klawiatury a
+następnie używając funkcji <code class="docutils literal"><span class="pre">print</span></code> wyświetla na ekranie kawałek tekstu oraz zawartość wcześniej
+utworzonej zmiennej.</p>
+<p>Aby zamienić podaną z klawiatury liczbę na zmienną liczbową (int lub float) musimy skorzystać z
+funkcji <code class="docutils literal"><span class="pre">int</span></code>.</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><div class="highlight"><pre><span class="n">zmienna1</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Podaj 1 liczbę: &quot;</span><span class="p">)</span>
+<span class="n">zmienna2</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Podaj 2 liczbę: &quot;</span><span class="p">)</span>
+<span class="n">wynik</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">zmienna1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">zmienna2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Suma:&quot;</span><span class="p">,</span> <span class="n">wynik</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Grupy mniej zaawansowane mogą poświęcić czas na eksperymenty z operacjami na zmiennych podawanych z klawiatury.</p>
+</div>
+<div class="section" id="funkcje">
+<h3>1.1.1. Funkcje<a class="headerlink" href="#funkcje" title="Permalink to this headline">¶</a></h3>
+<p>Funkcje są to wcześniej zdefiniowane kawałki kodu, których możemy później użyć do wykonania
+określonej czynności, zamiast wpisywać ten sam kod po raz kolejny.</p>
+<p>W okrągłych nawiasach po nazwach funkcji umieszczamy parametry lub argumenty funkcji (może być
+ich więcej niż jeden). Parametry i argumenty oddzielamy od siebie przecinkami.
+Jak widać na przykładzie funkcji <code class="docutils literal"><span class="pre">raw_input</span></code> niektóre funkcje pozostawiają <code class="docutils literal"><span class="pre">coś</span></code> po sobie. W
+tym przypadku funkcja <code class="docutils literal"><span class="pre">raw_input</span></code> pozostawia po sobie to, co użytkownik wpisał z klawiatury a
+my wrzucamy to do naszej zmiennej <code class="docutils literal"><span class="pre">zmienna1</span></code>. Kiedy funkcja pozostawia po sobie jakieś dane,
+mówimy, że funkcja zwraca dane.</p>
+<p>Kolejny program zapiszemy już w pliku aby prościej było go zmieniać oraz wykonywać wiele razy.
+W tym celu należy otworzyć edytor tekstu, wpisać do niego instrukcje języka Python, a następnie
+zapisać z rozszerzeniem <code class="docutils literal"><span class="pre">.py</span></code>. Aby uruchomić tak zapisany program należy będąc w linii poleceń
+(konsola / terminal) w tym samym katalogu gdzie zapisaliśmy nasz plik wpisać:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$python</span> nazwa-pliku.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wyrazenia-warunkowe">
+<h2>1.2. Wyrażenia warunkowe<a class="headerlink" href="#wyrazenia-warunkowe" title="Permalink to this headline">¶</a></h2>
+<p>Do podejmowania decyzji w programowaniu służy instrukcja warunkowa <code class="docutils literal"><span class="pre">if</span></code>.</p>
+<p>Blok kodu podany po instrukcji if zostanie wykonany wtedy, gdy wyrażenie warunkowe będzie
+prawdziwe. W przeciwnym przypadku blok kodu zostanie zignorowany.
+Część <code class="docutils literal"><span class="pre">else</span></code> jest przydatna, jeśli chcemy, żeby nasz program sprawdził wyrażenie warunkowe i
+wykonał blok kodu jeśli wyrażenie warunkowe jest prawdziwe lub wykonał inny blok kodu jeśli
+wyrażenie warunkowe było fałszywe.</p>
+<p>Python pozwala także na sprawdzenie większej liczby warunków w ramach jednej instrukcji <code class="docutils literal"><span class="pre">if</span></code>. Służy
+do tego instrukcja <code class="docutils literal"><span class="pre">elif</span></code> (skrót od else if).</p>
+<div class="highlight-python"><div class="highlight"><pre>if wyrażenie_warunkowe:
+    blok kodu 1
+elif:
+    blok kodu 2
+else:
+    blok kodu 3
+</pre></div>
+</div>
+<p>Wszystkie instrukcje w bloku kodu muszą być wcięte względem instrukcji <code class="docutils literal"><span class="pre">if</span></code>. W ten sposób Python
+rozpoznaje, które instrukcje ma wykonać po sprawdzeniu prawdziwości wyrażenia. Tak samo po
+instrukcjach <code class="docutils literal"><span class="pre">elif</span></code> i <code class="docutils literal"><span class="pre">else</span></code> musimy wstawić dwukropek a instrukcje muszą być wcięte.</p>
+<p>Głębokość wcięcia nie ma znaczenia (dobry zwyczaj programowania w Pythonie mówi, żeby używać
+czterech spacji) ale musi być ono w całym programie zawsze tej samej głębokości.
+Pobawmy się instrukcjami <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">elif</span></code> i <code class="docutils literal"><span class="pre">else</span></code> na prostym przykładzie.</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><div class="highlight"><pre><span class="n">zmienna</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Podaj liczbę: &#39;</span><span class="p">)</span>
+<span class="n">zmienna</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">zmienna</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">zmienna</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Wpisałeś liczbę dodatnią&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">zmienna</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Wpisałeś zero&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Wpisałeś liczbę ujemną&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;Koniec programu&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>W programie na początku wczytywana jest wartość z klawiatury do zmiennej, a następnie
+dokonujemy zmiany jej typu na liczbę całkowitą. W dalszej części stosujemy instrukcję <code class="docutils literal"><span class="pre">if</span></code>
+sprawdzając czy wartość podanej liczby jest większa od 0. Jeśli wartość będzie większa od 0 na
+ekranie wyświetlony będzie napis <code class="docutils literal"><span class="pre">Wpisałeś</span> <span class="pre">liczbę</span> <span class="pre">dodatnią</span></code>, jeśli nie, program wykona kolejną
+instrukcję: <code class="docutils literal"><span class="pre">elif</span></code> sprawdzając czy liczba jest równa 0. Jeśli żaden z powyższych warunków nie
+będzie spełniony wykonane zostanie polecenie zawarte po instrukcji <code class="docutils literal"><span class="pre">else</span></code>. Program zakończy się
+wyświetlając: <code class="docutils literal"><span class="pre">Koniec</span> <span class="pre">programu</span></code>.</p>
+<p>Jak również widać porównanie w Pythonie, wykonujemy poprzez podwójne użycie znaku
+równości: <code class="docutils literal"><span class="pre">==</span></code>. Matematyczne wyrażenie <code class="docutils literal"><span class="pre">nie</span> <span class="pre">równe</span></code> (≠) w Pythonie zapisujemy jako <code class="docutils literal"><span class="pre">!=</span></code>.</p>
+</div>
+<div class="section" id="gra-w-zgadnij-liczbe">
+<h2>1.3. Gra w &#8220;zgadnij liczbę&#8221;<a class="headerlink" href="#gra-w-zgadnij-liczbe" title="Permalink to this headline">¶</a></h2>
+<p>Napisz program, w którym:</p>
+<ul class="simple">
+<li>do zmiennej <code class="docutils literal"><span class="pre">dana</span></code> przypiszesz pewną liczbę</li>
+<li>użytkownik będzie mógł podać z klawiatury dowolną liczbę całkowitą</li>
+<li>jeżeli użytkownik trafi program wyświetli komunikat: <code class="docutils literal"><span class="pre">Gratulacje!</span></code>, a jeśli nie, to wyświetli
+napis określający czy podana liczba jest większa od danej czy mniejsza.</li>
+</ul>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><div class="highlight"><pre><span class="n">dana</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">strzal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Wpisz liczbę całkowitą&quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">strzal</span> <span class="o">==</span> <span class="n">dana</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Gratulacje! Zgadłeś&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">strzal</span> <span class="o">&lt;</span> <span class="n">dana</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest większa!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest mniejsza!&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Koniec programu.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zadania-dodatkowe">
+<h2>1.4. Zadania dodatkowe<a class="headerlink" href="#zadania-dodatkowe" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Za pomocą poznanych narzędzi stwórz program będący kalkulatorem.</li>
+<li>Napisz program rozwiązujący równania kwadratowe (<a class="reference internal" href="#kwadratowe"><em>Przykład równania kwadratowego</em></a>).</li>
+<li>Napisz program, który spyta użytkownika ile ma lat, a następnie wyświetli czy osoba ta jest
+młodzieżą, dzieckiem czy dorosłym (załóżmy, że dziecko ma mniej niż 12 lat, a dorosły więcej
+niż 18).</li>
+<li>Napisz program, który będzie sortował trzy podane przez użytkownika liczby.</li>
+<li>Napisz program, który w odpowiedzi na podaną przez użytkownika liczbę będzie wyświetlał
+komunikat czy jest to liczba parzysta, czy nieparzysta.</li>
+<li>Napisz program, który będzie sprawdzał czy z podanych przez użytkownika trzech długości
+można zbudować trójkąt.</li>
+</ol>
+<div class="section" id="przyklad-rownania-kwadratowego">
+<span id="kwadratowe"></span><h3>1.4.1. Przykład równania kwadratowego<a class="headerlink" href="#przyklad-rownania-kwadratowego" title="Permalink to this headline">¶</a></h3>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;Dla równania kwadratowego ax2+bx+c=0&#39;</span>
+<span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;podaj wartość parametru a: &#39;</span><span class="p">))</span>
+<span class="n">b</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;podaj wartość parametru b: &#39;</span><span class="p">))</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;podaj wartość parametru c: &#39;</span><span class="p">))</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+<span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">-</span><span class="n">delta</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">+</span><span class="n">delta</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">&#39;x1 = &#39;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="s">&#39;, x2= &#39;</span><span class="p">,</span> <span class="n">x2</span>
+<span class="k">elif</span> <span class="n">delta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">&#39;x0 = &#39;</span><span class="p">,</span> <span class="n">x0</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&#39;brak rozwiązań&#39;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="petla-while">
+<h2>1.5. Pętla WHILE<a class="headerlink" href="#petla-while" title="Permalink to this headline">¶</a></h2>
+<p>Pętla while służy do konstrukcji bloku instrukcji, które będą wykonywane warunkowo. W programie
+najpierw będzie sprawdzane czy warunek jest spełniony – jeśli tak, to wykonane będą wszystkie
+instrukcje zawarte w bloku. Następnie ponownie sprawdzany jest warunek, jeśli nadal jest spełniony
+to ponownie wykonuje wszystkie polecenia. Pętla jest wykonywana tak długo, jak długo warunek jest
+prawdziwy.</p>
+<div class="highlight-python"><div class="highlight"><pre>while wyrażenie_warunkowe:
+    blok kodu
+</pre></div>
+</div>
+<p>Zobaczmy działanie pętli <code class="docutils literal"><span class="pre">while</span></code> na poniższym przykładzie.</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">dana</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">kontynuuj</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">while</span> <span class="n">koniec</span><span class="p">:</span>
+    <span class="n">strzal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Wpisz liczbę całkowitą&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">strzal</span> <span class="o">==</span> <span class="n">dana</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Gratulacje! Zgadłeś&quot;</span><span class="p">)</span>
+        <span class="n">kontynuuj</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">elif</span> <span class="n">strzal</span> <span class="o">&lt;</span> <span class="n">dana</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest większa!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest mniejsza!&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Koniec programu.&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Program będzie wykonywany do momentu, w którym użytkownik poda właściwą liczbę. Zatem nie
+trzeba do każdego strzału ponownie uruchamiać programu. Zmienna <code class="docutils literal"><span class="pre">kontynuuj</span></code> ma ustawioną
+wartość logiczną <code class="docutils literal"><span class="pre">True</span></code> (z angielskiego prawda). W momencie, w którym użytkownik poda właściwą
+liczbę zmienna przyjmie wartość logiczną <code class="docutils literal"><span class="pre">False</span></code> (z angielskiego fałsz), co spowoduje zakończenie
+wykonywania pętli while.</p>
+</div>
+<div class="section" id="wyrazenia-break-i-continue">
+<h2>1.6. Wyrażenia break i continue<a class="headerlink" href="#wyrazenia-break-i-continue" title="Permalink to this headline">¶</a></h2>
+<p>Wyrażenie <code class="docutils literal"><span class="pre">break</span></code> powoduje natychmiastowe zakończenie wykonywania pętli.</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">dana</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">strzal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Wpisz liczbę całkowitą&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">strzal</span> <span class="o">==</span> <span class="n">dana</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Gratulacje! Zgadłeś&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">strzal</span> <span class="o">&lt;</span> <span class="n">dana</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest większa!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest mniejsza!&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Koniec programu.&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Wyrażenie <code class="docutils literal"><span class="pre">continue</span></code> powoduje ominięcie następujących po nim wyrażeń w bloku, a następnie
+rozpoczyna ponowne wykonanie pętli.</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">dana</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">strzal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Wpisz liczbę całkowitą&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">strzal</span> <span class="o">&gt;</span> <span class="n">dana</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest mniejsza!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">elif</span> <span class="n">strzal</span> <span class="o">&lt;</span> <span class="n">dana</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nie! Szukana liczba jest większa!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Gratulacje! Zgadłeś&quot;</span><span class="p">)</span>
+    <span class="k">break</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Koniec programu.&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="id1">
+<h3>1.6.1. Zadania dodatkowe<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Napisz program, który sumuje liczby dodatnie podawane przez użytkownika – pętla pozwala
+użytkownikowi podawać liczby dopóki nie poda liczby niedodatniej.
+Następnie obok podawanego wyniku będzie wyświetlana liczba określająca ilość podanych
+liczb.</li>
+<li>Na podstawie wcześniejszego zadania napisz program obliczający średnią liczb dodatnich, a
+następnie zmodyfikuj go tak, aby obliczana była średnia również dla liczb ujemnych.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="petla-for">
+<h2>1.7. Pętla FOR<a class="headerlink" href="#petla-for" title="Permalink to this headline">¶</a></h2>
+<p>Pętla for służy do wykonywania tego samego bloku operacji dla każdego elementu z pewnej listy.
+Ilość wykonań tego bloku jest równa liczbie elementów tej listy. Wywoływana w pętli zmienna
+przyjmuje po kolei wartości każdego z elementów.</p>
+<p>Przykłady list:</p>
+<ul>
+<li><p class="first">lista liczb wpisanych ręcznie – elementy podane w nawiasach kwadratowych</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">funkcja range – wywoła kolejno liczby naturalne zaczynając od podanej w nawiasie na
+pierwszym miejscu, kończąc na liczbie mniejszej o 1 od liczby na miejscu drugim</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Zobrazujmy działanie pętli <code class="docutils literal"><span class="pre">for</span></code> na prostym przykładzie, wymieniającym kolejno elementy z pewnej
+listy.</p>
+<div class="code_no">Kod nr <script>var code_no = code_no || 1; document.write(code_no++);</script></div><div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;Mamy listę elementów: &quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">liczba</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;element listy: &quot;</span><span class="p">,</span> <span class="n">liczba</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h3>1.7.1. Zadania dodatkowe<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Napisz dwa programy, które wypisują liczby naturalne od 1 do 15. W pierwszym programie
+wykonaj pętlę for, a w drugim while.</li>
+<li>Zmodyfikuj powyższe zadanie, tak aby programy obliczały sumę liczb od 1 do 15.</li>
+<li>Za pomocą pętli for, napisz program, który oblicza silnię liczby podanej przez użytkownika.</li>
+<li>Oblicz sumę kwadratów liczb naturalnych z zakresu od 1 do 100.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="slowniczek">
+<h2>1.8. Słowniczek<a class="headerlink" href="#slowniczek" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary docutils">
+<dt id="term-jezyk-interpretowany">Język interpretowany</dt>
+<dd>język, który jest tłumaczony i wykonywany &#8220;w locie&#8221;. Tłumaczeniem i
+wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.</dd>
+<dt id="term-interpreter">Interpreter</dt>
+<dd>program, który zajmuje się tłumaczeniem kodu języka programowania na język
+maszynowy i jego wykonywaniem.</dd>
+<dt id="term-zmienne">Zmienne</dt>
+<dd>symbole zdefiniowane i nazwane przez programistę, które służą do
+przechowywania wartości, obliczeń na nich i odwoływanie się do wartości przez zdefiniowaną nazwę.</dd>
+<dt id="term-funkcje">Funkcje</dt>
+<dd>fragmenty kodu zamknięte w określonym przez programistę symbolu, mogące
+przyjmować parametry oraz mogące zwracać wartości. Umożliwiają wielokrotne wywoływanie tego
+samego kodu, bez konieczności jego przepisywania za każdym razem, gdy zajdzie potrzeba jego
+wykonania.</dd>
+<dt id="term-typ-zmiennych">Typ zmiennych</dt>
+<dd>rodzaj danych, który przypisany jest do zmiennej w momencie jej tworzenia.</dd>
+</dl>
+<style>
+    div.code_no { text-align: right; background: #e3e3e3; padding: 6px 12px; }
+    div.highlight, div.highlight-python { margin-top: 0px; }
+</style></div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tic-tac-toe.html" class="btn btn-neutral float-right" title="2. Gra w Kółko i Krzyżyk"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../git.html" class="btn btn-neutral" title="Przygotowanie katalogu projektu"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Centrum Edukacji Obywatelskiej.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

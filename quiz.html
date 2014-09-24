@@ -1,0 +1,663 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Quiz – Aplikacja internetowa &mdash; Python 101 0.5 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Python 101 0.5 documentation" href="index.html"/>
+        <link rel="next" title="6. Lista ToDo – Aplikacja internetowa" href="todo.html"/>
+        <link rel="prev" title="4. Gra w Życie Conwaya" href="conway-life.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Python 101</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="env.html">Środowisko systemowe i wymagane oprogramowanie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="env.html#szkolny-remix-ucznia-sru">Szkolny Remix Ucznia (SRU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env.html#srodowisko-windows">Środowisko Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env.html#srodowisko-programistyczne-pycharm">Środowisko programistyczne PyCharm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Przygotowanie katalogu projektu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git.html#pobieranie-materialow">Pobieranie materiałów</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic/basic.html">1. Python - Podstawy programowania</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#zmienne">1.1. Zmienne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#wyrazenia-warunkowe">1.2. Wyrażenia warunkowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#gra-w-zgadnij-liczbe">1.3. Gra w &#8220;zgadnij liczbę&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#zadania-dodatkowe">1.4. Zadania dodatkowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#petla-while">1.5. Pętla WHILE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#wyrazenia-break-i-continue">1.6. Wyrażenia break i continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#petla-for">1.7. Pętla FOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/basic.html#slowniczek">1.8. Słowniczek</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tic-tac-toe.html">2. Gra w Kółko i Krzyżyk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pong/pong.html">3. Gra w Ponga</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#przygotowanie">3.1. Przygotowanie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#okienko-gry">3.2. Okienko gry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#pileczka">3.3. Piłeczka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#odbijanie-pileczki">3.4. Odbijanie piłeczki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#odbijamy-pileczke-rakietka">3.5. Odbijamy piłeczkę rakietką</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#gramy-przeciwko-komputerowi">3.6. Gramy przeciwko komputerowi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#pokazujemy-punkty">3.7. Pokazujemy punkty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pong/pong.html#zadania-dodatkowe-i-rzeczy-ktore-mozna-poprawic">3.8. Zadania dodatkowe i rzeczy które można poprawić</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conway-life.html">4. Gra w Życie Conwaya</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Quiz – Aplikacja internetowa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#struktura-katalogow">5.1. Struktura katalogów</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#szkielet-aplikacji">5.2. Szkielet aplikacji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definiowanie-widokow-strona-glowna">5.3. Definiowanie widoków – strona główna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pokaz-dane-aplikacji-pytania-i-odpowiedzi">5.4. Pokaż dane aplikacji – pytania i odpowiedzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oceniamy-odpowiedzi">5.5. Oceniamy odpowiedzi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dodatkowe-informacje">5.6. Dodatkowe informacje</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">6. Lista ToDo – Aplikacja internetowa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chatter.html">7. Chatter – Aplikacja internetowa</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Python 101</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>5. Quiz – Aplikacja internetowa</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/quiz.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="quiz-aplikacja-internetowa">
+<h1>5. Quiz – Aplikacja internetowa<a class="headerlink" href="#quiz-aplikacja-internetowa" title="Permalink to this headline">¶</a></h1>
+<p>Realizacja aplikacji internetowej Quiz w oparciu o mikro-framework Flask.</p>
+<div class="section" id="struktura-katalogow">
+<h2>5.1. Struktura katalogów<a class="headerlink" href="#struktura-katalogow" title="Permalink to this headline">¶</a></h2>
+<p>Zaczynamy od utworzenia katalogu projektu Quiz, w którym zamieścimy
+wszystkie pliki niezbędne do realizacji tej implementacji. W katalogu
+użytkownika tworzymy nowy katalog quiz, a w nim plik quiz.py:</p>
+<div class="highlight-bash"><div class="highlight"><pre>~<span class="nv">$ </span>mkdir quiz; <span class="nb">cd </span>quiz; touch quiz.py
+</pre></div>
+</div>
+<p>Aplikacja na przykładzie quizu – użytkownik zaznacza w formularzu
+poprawne odpowiedzi na pytania i otrzymuje ocenę – ma pokazać podstawową
+strukturę frameworka Flask.</p>
+</div>
+<div class="section" id="szkielet-aplikacji">
+<h2>5.2. Szkielet aplikacji<a class="headerlink" href="#szkielet-aplikacji" title="Permalink to this headline">¶</a></h2>
+<p>Utworzenie minimalnej aplikacji Flask pozwoli na uruchomienie serwera
+deweloperskiego, umożliwiającego wygodne rozwijanie kodu. W pliku
+quiz.py wpisujemy:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c"># todo/todo.py</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Serwer uruchamiamy komendą:</p>
+<div class="highlight-bash"><div class="highlight"><pre>~/python101/modul3/zadanie1<span class="nv">$ </span>python todo.py
+</pre></div>
+</div>
+<div class="figure">
+<img alt="_images/start_serwera.png" src="_images/start_serwera.png" />
+</div>
+<p>Domyślnie serwer uruchamia się pod adresem <a class="reference external" href="http://127.0.0.1:5000">http://127.0.0.1:5000</a>. Po
+wpisaniu adresu do przeglądarki internetowej otrzymamy stronę z błędem
+HTTP 404, co wynika z faktu, że nasza aplikacja nie ma jeszcze
+zdefiniowanego żadnego zachowania (widoku) dla tego adresu. W
+uproszczeniu możemy widok utożsamiać z pojedynczą stroną w ramach
+aplikacji internetowej.</p>
+</div>
+<div class="section" id="definiowanie-widokow-strona-glowna">
+<h2>5.3. Definiowanie widoków – strona główna<a class="headerlink" href="#definiowanie-widokow-strona-glowna" title="Permalink to this headline">¶</a></h2>
+<p>Widoki to funkcje Pythona powiązane z określonymi adresami URL za pomocą
+tzw. dekoratorów. Widoki pozwalają nam obsługiwać żądania GET i POST, a
+także, przy wykorzystaniu szablonów, generować i zwracać żądane przez
+klienta strony WWW. W szablonach oprócz znaczników HTML możemy
+umieszczać różne dane. Flask renderuje (łączy) kod HTML z danymi i
+odsyła do przeglądarki.</p>
+<p>W pliku <code class="docutils literal"><span class="pre">todo.py</span></code> umieścimy funkcję <code class="docutils literal"><span class="pre">index()</span></code>, widok naszej strony głównej:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c"># todo/todo.py</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="hll"><span class="c"># dekorator laczacy adres glowny z widokiem index</span>
+</span><span class="hll"><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class="hll"><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class="hll">    <span class="c"># gdybyśmy chcieli wyświetlić prosty tekst, użyjemy funkcji poniżej</span>
+</span><span class="hll">    <span class="c">#return &#39;Hello, SWOI&#39;</span>
+</span><span class="hll">    <span class="c"># zwracamy wyrenderowany szablon index.html:</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">render_templpate</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">)</span>
+</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Zauważmy, że widok index() za pomocą dekoratora &#64;app.route(&#8216;/&#8217;)
+związaliśmy z adresem głównym (/). Dalej w katalogu quiz tworzymy
+podkatalog templates, a w nim szablon index.html, wydajemy polecenia w
+terminalu:</p>
+<div class="highlight-bash"><div class="highlight"><pre>~/python101/modul3/zadanie1<span class="nv">$ </span>mkdir templates; <span class="nb">cd </span>templates; touch index.html
+</pre></div>
+</div>
+<p>Do pliku index.html wstawiamy przykładowy kod HTML:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- quiz/templates/index.html --&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Quiz SWOi<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Quiz SWOI<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>Po odwiedzeniu adresu <a class="reference external" href="http://127.0.0.1:5000">http://127.0.0.1:5000</a>, otrzymamy stronę HTML.</p>
+<div class="figure">
+<img alt="_images/h1.png" src="_images/h1.png" />
+</div>
+</div>
+<div class="section" id="pokaz-dane-aplikacji-pytania-i-odpowiedzi">
+<h2>5.4. Pokaż dane aplikacji – pytania i odpowiedzi<a class="headerlink" href="#pokaz-dane-aplikacji-pytania-i-odpowiedzi" title="Permalink to this headline">¶</a></h2>
+<p>Dane naszej aplikacji, a więc pytania i odpowiedzi, umieścimy w liście
+<code class="docutils literal"><span class="pre">QUESTIONS</span></code> w postaci słowników zawierających: treść pytania, listę
+możliwych odpowiedzi oraz poprawną odpowiedź. W pliku quiz.py wstawiamy
+listę pytań, aktualizujemy widok <code class="docutils literal"><span class="pre">index()</span></code>, przekazując do szablonu listę
+pytań jako zmienną questions.</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="c"># quiz/quiz.py</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="hll"><span class="c"># konfiguracja aplikacji</span>
+</span><span class="hll"><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span>
+</span><span class="hll">    <span class="n">SECRET_KEY</span><span class="o">=</span><span class="s">&#39;bardzosekretnawartosc&#39;</span><span class="p">,</span> <span class="c"># nieznany nikomu sekret</span>
+</span><span class="hll"><span class="p">))</span>
+</span><span class="hll">
+</span><span class="hll"><span class="c"># lista pytan</span>
+</span><span class="hll"><span class="n">QUESTIONS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class="hll">    <span class="p">{</span>
+</span><span class="hll">        <span class="s">&#39;question&#39;</span><span class="p">:</span> <span class="s">u&#39;Stolica Hiszpani, to:&#39;</span><span class="p">,</span><span class="c"># pytanie</span>
+</span><span class="hll">        <span class="s">&#39;answers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">u&#39;Madryt&#39;</span><span class="p">,</span> <span class="s">u&#39;Warszawa&#39;</span><span class="p">,</span> <span class="s">u&#39;Barcelona&#39;</span><span class="p">],</span> <span class="c"># mozliwe odpowiedzi</span>
+</span><span class="hll">        <span class="s">&#39;correct_answer&#39;</span><span class="p">:</span> <span class="s">u&#39;Madryt&#39;</span><span class="p">,</span> <span class="c"># poprawna odpowiedz</span>
+</span><span class="hll">    <span class="p">},</span>
+</span><span class="hll">    <span class="p">{</span>
+</span><span class="hll">        <span class="s">&#39;question&#39;</span><span class="p">:</span> <span class="s">u&#39;Objętość sześcianu o boku 6 cm, wynosi:&#39;</span><span class="p">,</span> <span class="c"># pytanie</span>
+</span><span class="hll">        <span class="s">&#39;answers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">u&#39;36&#39;</span><span class="p">,</span> <span class="s">u&#39;216&#39;</span><span class="p">,</span> <span class="s">u&#39;18&#39;</span><span class="p">],</span> <span class="c"># mozliwe odpowiedzi</span>
+</span><span class="hll">        <span class="s">&#39;correct_answer&#39;</span><span class="p">:</span> <span class="s">u&#39;216&#39;</span><span class="p">,</span> <span class="c"># poprawna odpowiedz</span>
+</span><span class="hll">    <span class="p">},</span>
+</span><span class="hll">    <span class="p">{</span>
+</span><span class="hll">        <span class="s">&#39;question&#39;</span><span class="p">:</span> <span class="s">u&#39;Symbol pierwiastka Helu, to:&#39;</span><span class="p">,</span> <span class="c"># pytanie</span>
+</span><span class="hll">        <span class="s">&#39;answers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">u&#39;Fe&#39;</span><span class="p">,</span> <span class="s">u&#39;H&#39;</span><span class="p">,</span> <span class="s">u&#39;He&#39;</span><span class="p">],</span> <span class="c"># mozlowe odpowiedzi</span>
+</span><span class="hll">        <span class="s">&#39;correct_answer&#39;</span><span class="p">:</span> <span class="s">u&#39;He&#39;</span><span class="p">,</span> <span class="c"># poprawna odpowiedz</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll"><span class="p">]</span>
+</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="c"># do templatki index.html przekazujemy liste pytan jako zmienna questions</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">questions</span><span class="o">=</span><span class="n">QUESTIONS</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Dodatkowo dodaliśmy konfigurację aplikacji, ustalając sekretny klucz,
+który przyda nam się w późniejszej części. Aktualizujemy szablon
+index.html, aby wyświetlić listę pytań w postaci formularza HTML.</p>
+<div class="highlight-html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">&lt;!-- quiz/templates/index.html --&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Quiz SWOI<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Quiz SWOI<span class="nt">&lt;/h1&gt;</span>
+
+        <span class="c">&lt;!-- formularz z quizem --&gt;</span>
+        <span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">&quot;POST&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- iterujemy po liscie pytan --&gt;</span>
+            {% for entry in questions %}
+                <span class="nt">&lt;p&gt;</span>
+                    <span class="c">&lt;!-- dla kazdego pytania wypisujemy pytanie (pole question) --&gt;</span>
+                    {{ entry.question }}
+                    <span class="nt">&lt;br&gt;</span>
+                    <span class="c">&lt;!-- zapamietujemy numer pytania liczac od zera --&gt;</span>
+                    {% set question_number = loop.index0 %}
+                    <span class="c">&lt;!-- iterujemy po mozliwych odpowiedziach dla danego pytania --&gt;</span>
+                    {% for answer in entry.answers %}
+                        <span class="nt">&lt;label&gt;</span>
+                            <span class="c">&lt;!-- odpowiedzi zamieniamy na radio buttony --&gt;</span>
+                            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">value=</span><span class="s">&quot;{{ answer }}&quot;</span> <span class="na">name=</span><span class="s">&quot;{{ question_number }}&quot;</span><span class="nt">&gt;</span>
+                            {{ answer }}
+                        <span class="nt">&lt;/label&gt;</span>
+                        <span class="nt">&lt;br&gt;</span>
+                    {% endfor %}
+                <span class="nt">&lt;/p&gt;</span>
+            {% endfor %}
+
+            <span class="c">&lt;!-- button wysylajacy wypelniony formularz --&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>Sprawdź odpowiedzi<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>Wewnątrz szablonu przeglądamy pytania zawarte w zmiennej questions za
+pomocą instrukcji <code class="docutils literal"><span class="pre">{%</span> <span class="pre">for</span> <span class="pre">entry</span> <span class="pre">in</span> <span class="pre">questions</span> <span class="pre">%}</span></code>, tworzymy formularz
+HTML składający się z treści pytania <code class="docutils literal"><span class="pre">{{</span> <span class="pre">entry.question</span> <span class="pre">}}</span></code> i listy
+odpowiedzi (kolejna pętla <code class="docutils literal"><span class="pre">{%</span> <span class="pre">for</span> <span class="pre">answer</span> <span class="pre">in</span> <span class="pre">entry.answers</span> <span class="pre">%}</span></code>) w
+postaci grupy opcji nazywanych dla odróżnienia kolejnymi indeksami pytań
+liczonymi od 0 (<code class="docutils literal"><span class="pre">{%</span> <span class="pre">set</span> <span class="pre">question_number</span> <span class="pre">=</span> <span class="pre">loop.index0</span> <span class="pre">%}</span></code>).</p>
+<p>W efekcie powinniśmy otrzymać następującą stronę internetową:</p>
+<div class="figure">
+<img alt="_images/quiz.png" src="_images/quiz.png" />
+</div>
+</div>
+<div class="section" id="oceniamy-odpowiedzi">
+<h2>5.5. Oceniamy odpowiedzi<a class="headerlink" href="#oceniamy-odpowiedzi" title="Permalink to this headline">¶</a></h2>
+<p>Mechanizm sprawdzana liczby poprawnych odpowiedzi umieścimy w pliku
+quiz.py, modyfikując widok <code class="docutils literal"><span class="pre">index()</span></code>:</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># uzupelniamy importy</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">flash</span>
+
+
+<span class="c"># rozszerzamy widok</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">,</span> <span class="s">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="c"># jezeli zadanie jest typu POST, to znaczy, ze ktos przeslal odpowiedzi do sprawdzenia</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span> <span class="c"># liczba poprawnych odpowiedzi</span>
+        <span class="n">answers</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span> <span class="c"># zapamietujemy slownik z odpowiedziami</span>
+        <span class="c"># sprawdzamy odpowiedzi:</span>
+        <span class="k">for</span> <span class="n">question_number</span><span class="p">,</span> <span class="n">user_answer</span> <span class="ow">in</span> <span class="n">answers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c"># pobieramy z listy informacje o poprawnej odpowiedzi</span>
+            <span class="n">correct_answer</span> <span class="o">=</span> <span class="n">QUESTIONS</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">question_number</span><span class="p">)][</span><span class="s">&#39;correct_answer&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">user_answer</span> <span class="o">==</span> <span class="n">correct_answer</span><span class="p">:</span> <span class="c"># porownujemy odpowiedzi</span>
+                <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c"># zwiekszamy wynik</span>
+        <span class="c"># przygotowujemy informacje o wyniku</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s">u&#39;Liczba poprawnych odpowiedzi, to: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+        <span class="c"># po POST przekierowujemy na strone glowna</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s">&#39;index&#39;</span><span class="p">))</span>
+
+    <span class="c"># jezeli zadanie jest typu GET, renderujemy index.html</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">questions</span><span class="o">=</span><span class="n">QUESTIONS</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>W szablonie index.html po znaczniku <code class="docutils literal"><span class="pre">&lt;h1&gt;</span></code> wstawiamy instrukcje
+wyświetlające wynik:</p>
+<div class="highlight-html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">&lt;!-- umieszczamy informacje ustawiona za pomoca funkcji flash --&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+    {% for message in get_flashed_messages() %}
+        <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">&quot;success&quot;</span><span class="nt">&gt;</span>{{ message }}<span class="nt">&lt;/strong&gt;</span>
+    {% endfor %}
+<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="jak-to-dziala">
+<h3>5.5.1. Jak to działa<a class="headerlink" href="#jak-to-dziala" title="Permalink to this headline">¶</a></h3>
+<p>Uzupełniliśmy dekorator app.route, aby obsługiwał zarówno
+żądania <a class="reference internal" href="#term-get"><em class="xref std std-term">GET</em></a> (wejście na stronę główną po wpisaniu adresu =&gt; pokazujemy
+pytania), jak i POST (przesłanie odpowiedzi z formularza pytań =&gt;
+oceniamy odpowiedzi).</p>
+<p>W widoku <code class="docutils literal"><span class="pre">index()</span></code> dodaliśmy instrukcję warunkową <code class="docutils literal"><span class="pre">if</span> <span class="pre">request.method</span> <span class="pre">==</span>
+<span class="pre">'POST':</span></code>, która wykrywa żądania POST i wykonuje blok kodu zliczający
+poprawne odpowiedzi. Zliczanie wykonywane jest w pętli
+<code class="docutils literal"><span class="pre">for</span> <span class="pre">question_number,</span> <span class="pre">user_answer</span> <span class="pre">in</span> <span class="pre">answers.items()</span></code>:</p>
+<p>DOKOŃCZYĆ: W tym celu iterujemy po przesłanych odpowiedziach i
+sprawdzamy, czy nadesłana odpowiedź jest zgodna z tą, którą
+przechowujemy w polu <code class="docutils literal"><span class="pre">correct_answer</span></code> konkretnego pytania. Dzięki
+temu, że w templatce dodaliśmy do każdego pytania jego numer (zmienna
+<code class="docutils literal"><span class="pre">question_number</span></code>), to możemy teraz po tym numerze odwołać się do
+konkretnego pytania na naszej liście.</p>
+<p>Jeżeli nadesłana odpowiedź jest zgodna z tym, co mamy zapisane w
+pytaniu, to naliczamy punkt. Informacje o wyniku przekazujemy do
+użytkownika za pomocą funkcji <code class="docutils literal"><span class="pre">flash</span></code>, która korzysta z sesji HTTP
+(właśnie dlatego musieliśmy ustalić <code class="docutils literal"><span class="pre">SECRET_KEY</span></code> dla naszej
+aplikacji).</p>
+<p>W efekcie otrzymujemy aplikację Quiz.</p>
+</div>
+</div>
+<div class="section" id="dodatkowe-informacje">
+<h2>5.6. Dodatkowe informacje<a class="headerlink" href="#dodatkowe-informacje" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Strona projektu Flask <a class="reference external" href="http://flask.pocoo.org/">http://flask.pocoo.org/</a></li>
+<li>Co to jest framework? <a class="reference external" href="http://pl.wikipedia.org/wiki/Framework">http://pl.wikipedia.org/wiki/Framework</a></li>
+<li>Co nieco o HTTP i żądaniach GET i POST
+<a class="reference external" href="http://pl.wikipedia.org/wiki/Http">http://pl.wikipedia.org/wiki/Http</a></li>
+</ol>
+<div class="section" id="slownik-pojec">
+<h3>5.6.1. Słownik pojęć<a class="headerlink" href="#slownik-pojec" title="Permalink to this headline">¶</a></h3>
+<dl class="glossary docutils">
+<dt id="term-aplikacja">Aplikacja</dt>
+<dd>program komputerowy.</dd>
+<dt id="term-framework">Framework</dt>
+<dd>zestaw komponentów i bibliotek wykorzystywany do budowy aplikacji.</dd>
+<dt id="term-get">GET</dt>
+<dd>typ żądania HTTP, służący do pobierania zasobów z serwera WWW.</dd>
+<dt id="term-html">HTML</dt>
+<dd>język znaczników wykorzystywany do formatowania dokumentów,
+zwłaszcza stron WWW.</dd>
+<dt id="term-http">HTTP</dt>
+<dd>protokół przesyłania dokumentów WWW.</dd>
+<dt id="term-post">POST</dt>
+<dd>typ żądania HTTP, służący do umieszczania zasobów na serwerze WWW.</dd>
+<dt id="term-serwer-deweloperski">Serwer deweloperski</dt>
+<dd>serwer używany w czasie prac nad oprogramowaniem.</dd>
+<dt id="term-serwer-www">Serwer WWW</dt>
+<dd>serwer obsługujący protokół HTTP.</dd>
+<dt id="term-templatka">Templatka</dt>
+<dd>szablon strony WWW wykorzystywany przez Flask do
+renderowania widoków.</dd>
+<dt id="term-url">URL</dt>
+<dd>ustandaryzowany format adresowania zasobów w internecie
+(przykład: adres strony WWW).</dd>
+<dt id="term-widok">Widok</dt>
+<dd>fragment danych, który jest reprezentowany użytkownikowi.</dd>
+</dl>
+</div>
+<div class="section" id="film-instruktazowy">
+<h3>5.6.2. Film instruktażowy:<a class="headerlink" href="#film-instruktazowy" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://youtu.be/1WAeyriYymQ">http://youtu.be/1WAeyriYymQ</a></p>
+</div>
+<div class="section" id="metryka">
+<h3>5.6.3. Metryka<a class="headerlink" href="#metryka" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Autorzy:</th><td class="field-body">Tomasz Nowacki, Robert Bednarz, Janusz Skonieczny</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Czas trwania:</th><td class="field-body">90 minut</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="todo.html" class="btn btn-neutral float-right" title="6. Lista ToDo – Aplikacja internetowa"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="conway-life.html" class="btn btn-neutral" title="4. Gra w Życie Conwaya"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Centrum Edukacji Obywatelskiej.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
